@@ -8,12 +8,11 @@ export default async function handler(req, res) {
       }
     });
 
-    if (!response.ok) {
-      throw new Error(`IDX API request failed with status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    res.status(200).json(data);
+    const text = await response.text();
+    res.status(200).send({
+      status: response.status,
+      body: text
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
