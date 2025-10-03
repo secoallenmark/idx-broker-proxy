@@ -2,10 +2,10 @@
   "name": "idx-broker-proxy",
   "version": "1.0.0",
   "description": "Proxy server for IDX Broker API requests",
-  "main": "api/listings.js",
+  "main": "api/listing.js",
   "scripts": {
     "dev": "vercel dev",
-    "start": "node api/listings.js",
+    "start": "node api/listing.js",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "repository": {
